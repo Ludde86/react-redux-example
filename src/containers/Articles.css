@@ -1,0 +1,8 @@
+.container-article {
+	width: 40%;
+	margin: auto;
+	border: 2px solid purple;
+	border-radius: 5px;
+	background: #333;
+	color: #fff;
+}

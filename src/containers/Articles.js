@@ -4,6 +4,7 @@ import AddArticle from '../components/AddArticle/AddArticle';
 import { connect } from 'react-redux';
 // import * as actionTypes from '../store/actionTypes';
 import { simulateHttpRequest } from '../store/actionCreators';
+import './Articles.css';
 
 const Articles = ({ articles, saveArticle }) => {
 	/* we got this as props */
@@ -16,7 +17,7 @@ const Articles = ({ articles, saveArticle }) => {
 	// };
 
 	return (
-		<div>
+		<div className="container-article">
 			<AddArticle saveArticle={saveArticle} />
 			{articles.map((article) => <Article article={article} />)}
 		</div>
