@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AddArticle.css';
 
 const AddArticle = ({ saveArticle }) => {
 	const [ article, setArticle ] = useState();
@@ -14,10 +15,12 @@ const AddArticle = ({ saveArticle }) => {
 	};
 
 	return (
-		<form onSubmit={addNewArticle} className="add-article">
-			<input type="text" id="title" placeholder="Title" onChange={handleArticleData} />
-			<input type="text" id="body" placeholder="Body" onChange={handleArticleData} />
-			<button type="submit">Add Article</button>
+		<form className="form-group add-article" onSubmit={addNewArticle}>
+			<input className="form-control" type="text" id="title" placeholder="Title" onChange={handleArticleData} />
+			<input className="form-control" type="text" id="body" placeholder="Body" onChange={handleArticleData} />
+			<button className="btn btn-secondary btn-lg btn-block" type="submit">
+				Add Article
+			</button>
 		</form>
 	);
 };
